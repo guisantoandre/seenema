@@ -4,7 +4,7 @@
 
 > Link do projeto: **[Seenema](https://seenema.vercel.app/)** <br>
 
-## Para rodar o código no seu computador:
+# Para rodar o código no seu computador:
 - npm install
 - npm run dev
 
