@@ -1,0 +1,133 @@
+.filterWrapper {
+   display: grid;
+   justify-content: end;
+   margin-bottom: 2rem;
+}
+
+.filterOptions label {
+   position: relative;
+   font-size: var(--normal);
+   color: var(--greyColor);
+   margin-right: 5px;
+}
+
+.filterOptions select {
+   appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   border: none;
+   border-radius: var(--borderRadius);
+   background-color: #181824;
+   color: var(--white);
+   font-family: var(--font-inter);
+   font-weight: 600;
+   font-size: var(--normal);
+   padding: 1rem 1.2rem;
+   border-radius: var(--borderRadius);
+   cursor: pointer;
+   transition: var(--transition);
+}
+.filterOptions select:focus {
+   outline: none;
+   box-shadow: 0 0 0 2px var(--accentColor);
+}
+
+.filterOptions select option {
+   background-color: var(--cardbg);
+   font-weight: 600;
+}
+
+.moviesContainer {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 2rem;
+}
+
+.card {
+   border: var(--borderColor);
+   border-radius: 4px;
+   max-width: 380px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem 0;
+   padding: 2rem;
+   background-color: var(--cardbg);
+   transition: var(--transition);
+   cursor: pointer;
+   text-align: center;
+}
+.card:hover {
+   border: var(--borderColorHover);
+}
+
+.imageContainer {
+   position: relative;
+   width: 240px;
+   height: 350px;
+   object-fit: cover;
+}
+
+.posterImg {
+   transition: var(--transition);
+}
+.card:hover .posterImg {
+   transform: scale(1.02);
+}
+
+.rating {
+   position: absolute;
+   bottom: 0;
+   right: -15px;
+   width: 40px;
+   background-color: rgba(0, 0, 0, 0.6);
+   border-radius: 50%;
+}
+
+.percentageBar {
+   opacity: 0.5;
+   transition: var(--transition);
+}
+.card:hover .percentageBar {
+   opacity: 1;
+}
+
+.title {
+   color: #c9cacc;
+   font-size: clamp(var(--normal), 2.5vw, var(--large));
+   font-weight: 600;
+   transition: var(--transition);
+}
+.card:hover .title {
+   color: #fff;
+}
+
+.lancamento {
+   font-size: var(--small);
+   color: var(--greyColor);
+}
+
+@media (max-width: 450px) {
+   .moviesContainer {
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+   }
+}
+
+@media (max-width: 660px) {
+   .filterWrapper {
+      justify-content: center;
+   }
+}
+
+@media (max-width: 700px) {
+   .card {
+      margin: auto;
+   }
+}
+
+@media (max-width: 450px) {
+   .imageContainer {
+      width: 200px;
+      height: 300px;
+   }
+}
