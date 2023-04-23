@@ -58,10 +58,11 @@ const MovieList = ({ results }: Props) => {
                   value={filteredMovies}
                   onChange={(e) => setFilter(e.target.value)}
                >
-                  <option value="default">Padrão</option>
+                  <option value="default">-- Selecione --</option>
                   <option value="morePopular">Mais popular</option>
                   <option value="lessPopular">Menos popular</option>
                </select>
+               <div className={styles.arrowDown}></div>
             </div>
          </div>
          <div className={styles.moviesContainer}>

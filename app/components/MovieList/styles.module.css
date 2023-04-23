@@ -4,8 +4,14 @@
    margin-bottom: 2rem;
 }
 
-.filterOptions label {
+.filterOptions {
    position: relative;
+   display: flex;
+   align-items: center;
+   flex-wrap: nowrap;
+}
+
+.filterOptions label {
    font-size: var(--normal);
    color: var(--greyColor);
    margin-right: 5px;
@@ -22,7 +28,7 @@
    font-family: var(--font-inter);
    font-weight: 600;
    font-size: var(--normal);
-   padding: 1rem 1.2rem;
+   padding: 1rem 3rem 1rem 1rem;
    border-radius: var(--borderRadius);
    cursor: pointer;
    transition: var(--transition);
@@ -30,6 +36,17 @@
 .filterOptions select:focus {
    outline: none;
    box-shadow: 0 0 0 2px var(--accentColor);
+}
+.arrowDown {
+   width: 0;
+   height: 0;
+   border-left: 5px solid transparent;
+   border-right: 5px solid transparent;
+   border-top: 6px solid var(--white);
+   transform: rotate(360deg);
+   position: absolute;
+   top: 17px;
+   right: 12px;
 }
 
 .filterOptions select option {
