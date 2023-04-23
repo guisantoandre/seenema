@@ -38,16 +38,16 @@ const MovieInfo = ({ info }: Props) => {
             <div className={styles.infoText}>
                <h2 className={styles.title}>{info.title}</h2>
                <div className={styles.details}>
-                  <div>
+                  <div className={styles.detail}>
                      <Emoji symbol="📅" label="date" />
                      <span>{formatDate(info.release_date)}</span>
                   </div>
 
-                  <div>
+                  <div className={styles.detail}>
                      <Emoji symbol="🕑" label="time" />
                      <span>{convertToHours(info.runtime)}</span>
                   </div>
-                  <div>
+                  <div className={styles.detail}>
                      <Emoji symbol="📽️" label="time" />
                      <span>{formattedGenres}</span>
                   </div>

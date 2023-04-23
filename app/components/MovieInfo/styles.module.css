@@ -53,6 +53,12 @@
    gap: 0.6rem 0;
 }
 
+.detail {
+   display: flex;
+   align-items: center;
+   gap: 0 0.5rem;
+}
+
 .description {
    margin-top: 2rem;
 }
